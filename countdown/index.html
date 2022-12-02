@@ -12,7 +12,8 @@
             <h1>Countdown</h1>
             <form>
                 <input type="number" />
-                <button>Start</button>
+                <button id="startBtn">Start</button>
+                <button id="stopBtn">Stop</button>
             </form>
             <div id="output"></div>
         </div>
@@ -20,14 +21,26 @@
         <script>
         
 // Event listener: start button
-document.querySelector("button").addEventListener("click", handleStartBtn);
+document.querySelector("#startBtn").addEventListener("click", handleStartBtn);
+document.querySelector("#stopBtn").addEventListener("click", handleStopBtn);
+
+var interval;
 
 function handleStartBtn(e) {
     e.preventDefault();
     // Get user input
     const userNumber = document.querySelector("input").value;
 
-    console.log(userNumber);
+    interval = setInterval(() => {
+        console.log("hello");
+    }, 1000);
+
+}
+
+function handleStopBtn(e) {
+    e.preventDefault();
+
+    clearInterval(interval);
 }
 
         </script>
