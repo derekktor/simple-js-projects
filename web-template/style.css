@@ -1,0 +1,158 @@
+:root {
+    --bg-color: #1f2937;
+    --white: #f9faf8;
+    --gray: #e5e7eb;
+    --dgray: #1f2937;
+    --blue: #3882f6;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto Mono", monospace;
+}
+
+button {
+    padding: 8px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: 0.2s all;
+}
+
+section {
+    padding: 20px 15vw;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 30px;
+}
+
+a {
+    color: var(--gray);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--white);
+}
+
+.header {
+    background-color: var(--bg-color);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--white);
+}
+
+.links {
+    display: flex;
+    gap: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.header-content > * {
+    width: 40%;
+}
+
+.header-content button {
+    background-color: var(--blue);
+    color: white;
+}
+
+.header-content button:hover {
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.header-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+}
+
+.header-text h1 {
+    color: var(--white);
+}
+
+.header-text p {
+    color: var(--gray);
+}
+
+.header-img {
+    background-color: rgb(86, 86, 86);
+}
+
+.gallery {
+    text-align: center;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+}
+
+.card img {
+    border: 5px solid var(--blue);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.card p {
+    color: var(--dgray);
+}
+
+.quote-block {
+    background-color: var(--gray);
+    padding: 50px 30vw;
+}
+
+.quote-block p {
+    font-size: 20px;
+    color: var(--dgray);
+    font-style: italic;
+}
+
+.quote-block .author {
+    text-align: right;
+}
+
+.cta-ctx {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--blue);
+    color: white;
+    padding: 20px 60px;
+    border-radius: 10px;
+}
+
+.cta-ctx p {
+    color: var(--gray);
+}
+
+.footer {
+    background-color: var(--bg-color);
+    color: var(--white);
+}

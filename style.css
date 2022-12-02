@@ -1,0 +1,27 @@
+:root {
+    --green: rgb(69, 110, 62);
+    --dgreen: rgb(36, 55, 34);
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: Roboto, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: var(--green);
+    transition: .2s all ease-in-out;
+}
+
+a:hover {
+    color: var(--dgreen);
+}
+
+.container {
+    width: 60vw;
+    margin: 40px auto;
+}

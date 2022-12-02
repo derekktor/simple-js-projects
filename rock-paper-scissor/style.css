@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    width: 80vw;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.hflex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input {
+    padding: 10px 2px;
+}
+
+button {
+    background-color: white;
+    padding: 10px 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .2s all;
+}
+
+button:hover{
+    background-color: gray;
+    color: white;
+}
+
+.scoreboard {
+    border: 1px solid black;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 20px;
+}
+
+.form-control {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    margin: 10px;
+}

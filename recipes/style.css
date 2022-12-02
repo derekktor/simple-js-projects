@@ -1,0 +1,31 @@
+:root {
+    --green: rgba(60, 213, 72, 0.704);
+    --dgreen: rgba(35, 115, 41, 0.704);
+}
+
+body {
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+}
+
+a {
+    color: var(--green);
+    text-decoration: none;
+    transition: .2s all;
+}
+
+a:hover {
+    color: var(--dgreen);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 60vw;
+    margin: 30px auto;
+}
