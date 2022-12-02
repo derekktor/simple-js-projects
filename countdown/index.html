@@ -19,11 +19,15 @@
 
         <script>
         
+// Event listener: start button
 document.querySelector("button").addEventListener("click", handleStartBtn);
 
 function handleStartBtn(e) {
     e.preventDefault();
-    console.log("hello");
+    // Get user input
+    const userNumber = document.querySelector("input").value;
+
+    console.log(userNumber);
 }
 
         </script>
