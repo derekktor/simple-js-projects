@@ -56,8 +56,8 @@ function getComputerChoice() {
 function displayResult(userSelection, computerSelection, result) {
     let output = "";
 
-    output += `User: ${userSelection}<br/>`;
-    output += `Computer: ${computerSelection}<br/>`;
+    output += `User: <i>${userSelection}</i><br/>`;
+    output += `Computer: <i>${computerSelection}</i><br/>`;
 
     switch (result) {
         case "user":
@@ -75,6 +75,41 @@ function displayResult(userSelection, computerSelection, result) {
 
     document.querySelector("#result").innerHTML = output;
 }
+
+// Get user input
+const getUserChoice = (e) => {
+    let userSelection = "";
+    if (e.keyCode === 114) {
+        console.log(`R pressed`);
+        userSelection = "rock"
+    } else if (e.keyCode === 112) {
+        console.log(`P pressed`);
+        userSelection = "paper"
+    } else if (e.keyCode === 115) {
+        console.log(`S pressed`);
+        userSelection = "scissor"
+    }
+    
+    playWithComputer(userSelection)
+}
+
+const playWithComputer = (choice) => {
+    const computerSelection = getComputerChoice();
+    const result = playRound(choice, computerSelection);
+    displayResult(choice, computerSelection, result)
+}
+
+// Event Listener: Key Press
+window.addEventListener("keypress", getUserChoice);
+
+// Event Listener: Rock btn
+document.querySelector("#rockBtn").addEventListener("click", () => playWithComputer("rock"))
+// Event Listener: Paper btn
+document.querySelector("#paperBtn").addEventListener("click", () => playWithComputer("paper"))
+// Event Listener: Scissor btn
+document.querySelector("#scissorBtn").addEventListener("click", () => playWithComputer("scissor"))
+
+/* 
 
 // When user submits
 function handleUserInput() {
@@ -95,3 +130,5 @@ function handleUserInput() {
 
 // Event: Handle user input submit
 document.querySelector("#submitBtn").addEventListener("click", handleUserInput);
+
+*/
