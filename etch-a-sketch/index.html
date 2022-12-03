@@ -17,13 +17,21 @@
     display: grid;
     grid-template-columns: repeat(var(--gridNumber), 1fr);
     grid-template-rows: repeat(var(--gridNumber), 1fr);
-    gap: 10px;
+    gap: 1px;
+    justify-items: center;
 }
 
 .grid > div {
     border: 1px solid lightslategray;
     width: var(--tileSize);
     height: var(--tileSize);
+    cursor: pointer;
+    transition: .1s all ease-in-out;
+}
+
+.grid > div:hover {
+    background-color: darkgray;
+    border: 1px solid white;
 }
 
     </style>
@@ -34,7 +42,6 @@
         <form>
             <div class="form-control">
                 <input type="number">
-                <button>Submit</button>
             </div>
         </form>
         <div class="grid">

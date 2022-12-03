@@ -24,4 +24,20 @@ a:hover {
 .container {
     width: 60vw;
     margin: 40px auto;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 20px;
+}
+
+button {
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px 20px;
+    cursor: pointer;
+    transition: .1s all ease-in-out;
+}
+
+button:hover {
+    background-color: lightslategray;
+    color: white;
 }
